@@ -1406,6 +1406,7 @@ drawable design_snackbar_background
 drawable github_logo_1
 drawable github_logo_2
 drawable ic_calendar_black_24dp
+drawable ic_circle_image
 drawable ic_clear_black_24dp
 drawable ic_company
 drawable ic_edit_black_24dp
@@ -1420,6 +1421,9 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_octicons_eye
+drawable ic_octicons_repo_forked
+drawable ic_octicons_star
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -1519,6 +1523,7 @@ id blocking
 id bottom
 id buttonPanel
 id cancel_button
+id cardview
 id center
 id center_horizontal
 id center_vertical
@@ -1660,9 +1665,14 @@ id repoListUserCompany
 id repoListUserLocation
 id repoListUserName
 id repo_button
+id repositoryListRowFork
+id repositoryListRowLanguageCircle
+id repositoryListRowStar
 id repositoryListRowTextDescription
+id repositoryListRowTextForkNumber
 id repositoryListRowTextLanguage
 id repositoryListRowTextName
+id repositoryListRowTextStarNumber
 id repositoryRecyclerView
 id right
 id right_icon

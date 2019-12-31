@@ -30,7 +30,7 @@ public final class GHRepositoryAdapter extends androidx.recyclerview.widget.Recy
         super();
     }
     
-    @kotlin.Metadata(mv = {1, 1, 15}, bv = {1, 0, 3}, k = 1, d1 = {"\u0000$\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0010\u0002\n\u0000\u0018\u00002\u00020\u00012\u00020\u0002B\r\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u00a2\u0006\u0002\u0010\u0005J\u0012\u0010\u000e\u001a\u00020\u000f2\b\u0010\u0003\u001a\u0004\u0018\u00010\u0004H\u0016R\u0011\u0010\u0006\u001a\u00020\u0007\u00a2\u0006\b\n\u0000\u001a\u0004\b\b\u0010\tR\u0011\u0010\n\u001a\u00020\u0007\u00a2\u0006\b\n\u0000\u001a\u0004\b\u000b\u0010\tR\u0011\u0010\f\u001a\u00020\u0007\u00a2\u0006\b\n\u0000\u001a\u0004\b\r\u0010\t\u00a8\u0006\u0010"}, d2 = {"Lcom/example/githubClient/adapter/GHRepositoryAdapter$GHRepositoryViewHolder;", "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;", "Landroid/view/View$OnClickListener;", "view", "Landroid/view/View;", "(Landroid/view/View;)V", "textViewDescription", "Landroid/widget/TextView;", "getTextViewDescription", "()Landroid/widget/TextView;", "textViewLanguage", "getTextViewLanguage", "textViewName", "getTextViewName", "onClick", "", "app_debug"})
+    @kotlin.Metadata(mv = {1, 1, 15}, bv = {1, 0, 3}, k = 1, d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u000b\n\u0002\u0010\u0002\n\u0000\u0018\u00002\u00020\u00012\u00020\u0002B\r\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u00a2\u0006\u0002\u0010\u0005J\u0012\u0010\u0016\u001a\u00020\u00172\b\u0010\u0003\u001a\u0004\u0018\u00010\u0004H\u0016R\u0011\u0010\u0006\u001a\u00020\u0007\u00a2\u0006\b\n\u0000\u001a\u0004\b\b\u0010\tR\u0011\u0010\n\u001a\u00020\u000b\u00a2\u0006\b\n\u0000\u001a\u0004\b\f\u0010\rR\u0011\u0010\u000e\u001a\u00020\u000b\u00a2\u0006\b\n\u0000\u001a\u0004\b\u000f\u0010\rR\u0011\u0010\u0010\u001a\u00020\u000b\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0011\u0010\rR\u0011\u0010\u0012\u001a\u00020\u000b\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0013\u0010\rR\u0011\u0010\u0014\u001a\u00020\u000b\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0015\u0010\r\u00a8\u0006\u0018"}, d2 = {"Lcom/example/githubClient/adapter/GHRepositoryAdapter$GHRepositoryViewHolder;", "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;", "Landroid/view/View$OnClickListener;", "view", "Landroid/view/View;", "(Landroid/view/View;)V", "imageViewLanguageCircle", "Landroid/widget/ImageView;", "getImageViewLanguageCircle", "()Landroid/widget/ImageView;", "textViewDescription", "Landroid/widget/TextView;", "getTextViewDescription", "()Landroid/widget/TextView;", "textViewForkNumber", "getTextViewForkNumber", "textViewLanguage", "getTextViewLanguage", "textViewName", "getTextViewName", "textViewStarNumber", "getTextViewStarNumber", "onClick", "", "app_debug"})
     public static final class GHRepositoryViewHolder extends androidx.recyclerview.widget.RecyclerView.ViewHolder implements android.view.View.OnClickListener {
         @org.jetbrains.annotations.NotNull()
         private final android.widget.TextView textViewName = null;
@@ -38,6 +38,12 @@ public final class GHRepositoryAdapter extends androidx.recyclerview.widget.Recy
         private final android.widget.TextView textViewDescription = null;
         @org.jetbrains.annotations.NotNull()
         private final android.widget.TextView textViewLanguage = null;
+        @org.jetbrains.annotations.NotNull()
+        private final android.widget.ImageView imageViewLanguageCircle = null;
+        @org.jetbrains.annotations.NotNull()
+        private final android.widget.TextView textViewForkNumber = null;
+        @org.jetbrains.annotations.NotNull()
+        private final android.widget.TextView textViewStarNumber = null;
         
         @org.jetbrains.annotations.NotNull()
         public final android.widget.TextView getTextViewName() {
@@ -51,6 +57,21 @@ public final class GHRepositoryAdapter extends androidx.recyclerview.widget.Recy
         
         @org.jetbrains.annotations.NotNull()
         public final android.widget.TextView getTextViewLanguage() {
+            return null;
+        }
+        
+        @org.jetbrains.annotations.NotNull()
+        public final android.widget.ImageView getImageViewLanguageCircle() {
+            return null;
+        }
+        
+        @org.jetbrains.annotations.NotNull()
+        public final android.widget.TextView getTextViewForkNumber() {
+            return null;
+        }
+        
+        @org.jetbrains.annotations.NotNull()
+        public final android.widget.TextView getTextViewStarNumber() {
             return null;
         }
         

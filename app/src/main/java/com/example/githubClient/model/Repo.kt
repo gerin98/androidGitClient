@@ -4,7 +4,15 @@ import android.os.Parcel
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
-class Repo(id: Int?, nodeId: String?, name: String?, fullName: String?, htmlUrl: String?, description: String?, language: String?) : Parcelable{
+class Repo(id: Int?, nodeId: String?, name: String?, fullName: String?, htmlUrl: String?,
+           description: String?, language: String?, stargazersCount: Int?,
+           forksCount: Int?) : Parcelable{
+
+    /**
+     * The github api currently does not give the correct watch count through `watchers_count`
+     * The only way to get the watch count is to hit `/repos/:owner/:repo` and obtain the
+     * `subscribers_count` instead. This'll result in O(n) network calls.
+     */
 
     constructor(parcel: Parcel) : this(
         parcel.readValue(Int::class.java.classLoader) as? Int,
@@ -13,7 +21,9 @@ class Repo(id: Int?, nodeId: String?, name: String?, fullName: String?, htmlUrl:
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
-        parcel.readString())
+        parcel.readString(),
+        parcel.readValue(Int::class.java.classLoader) as? Int,
+        parcel.readValue(Int::class.java.classLoader) as? Int)
 
     companion object CREATOR : Parcelable.Creator<Repo> {
         override fun createFromParcel(parcel: Parcel): Repo {
@@ -39,6 +49,10 @@ class Repo(id: Int?, nodeId: String?, name: String?, fullName: String?, htmlUrl:
     var description: String? = null
     @SerializedName("language")
     var language: String? = null
+    @SerializedName("stargazers_count")
+    var stargazersCount: Int? = null
+    @SerializedName("forks_count")
+    var forksCount: Int? = null
 
     init {
         this.id = id
@@ -48,6 +62,8 @@ class Repo(id: Int?, nodeId: String?, name: String?, fullName: String?, htmlUrl:
         this.htmlUrl = htmlUrl
         this.description = description
         this.language = language
+        this.stargazersCount = stargazersCount
+        this.forksCount = forksCount
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
@@ -58,6 +74,8 @@ class Repo(id: Int?, nodeId: String?, name: String?, fullName: String?, htmlUrl:
         parcel.writeString(htmlUrl)
         parcel.writeString(description)
         parcel.writeString(language)
+        parcel.writeValue(stargazersCount)
+        parcel.writeValue(forksCount)
     }
 
     override fun describeContents(): Int {

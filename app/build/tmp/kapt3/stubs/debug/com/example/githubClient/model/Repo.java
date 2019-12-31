@@ -2,7 +2,7 @@ package com.example.githubClient.model;
 
 import java.lang.System;
 
-@kotlin.Metadata(mv = {1, 1, 15}, bv = {1, 0, 3}, k = 1, d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u001b\n\u0002\u0010\u0002\n\u0002\b\u0003\u0018\u0000 &2\u00020\u0001:\u0001&B\u000f\b\u0016\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004BK\u0012\b\u0010\u0005\u001a\u0004\u0018\u00010\u0006\u0012\b\u0010\u0007\u001a\u0004\u0018\u00010\b\u0012\b\u0010\t\u001a\u0004\u0018\u00010\b\u0012\b\u0010\n\u001a\u0004\u0018\u00010\b\u0012\b\u0010\u000b\u001a\u0004\u0018\u00010\b\u0012\b\u0010\f\u001a\u0004\u0018\u00010\b\u0012\b\u0010\r\u001a\u0004\u0018\u00010\b\u00a2\u0006\u0002\u0010\u000eJ\b\u0010\"\u001a\u00020\u0006H\u0016J\u0018\u0010#\u001a\u00020$2\u0006\u0010\u0002\u001a\u00020\u00032\u0006\u0010%\u001a\u00020\u0006H\u0016R \u0010\f\u001a\u0004\u0018\u00010\b8\u0006@\u0006X\u0087\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u000f\u0010\u0010\"\u0004\b\u0011\u0010\u0012R \u0010\n\u001a\u0004\u0018\u00010\b8\u0006@\u0006X\u0087\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u0013\u0010\u0010\"\u0004\b\u0014\u0010\u0012R \u0010\u000b\u001a\u0004\u0018\u00010\b8\u0006@\u0006X\u0087\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u0015\u0010\u0010\"\u0004\b\u0016\u0010\u0012R\"\u0010\u0005\u001a\u0004\u0018\u00010\u00068\u0006@\u0006X\u0087\u000e\u00a2\u0006\u0010\n\u0002\u0010\u001b\u001a\u0004\b\u0017\u0010\u0018\"\u0004\b\u0019\u0010\u001aR \u0010\r\u001a\u0004\u0018\u00010\b8\u0006@\u0006X\u0087\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u001c\u0010\u0010\"\u0004\b\u001d\u0010\u0012R \u0010\t\u001a\u0004\u0018\u00010\b8\u0006@\u0006X\u0087\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u001e\u0010\u0010\"\u0004\b\u001f\u0010\u0012R \u0010\u0007\u001a\u0004\u0018\u00010\b8\u0006@\u0006X\u0087\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b \u0010\u0010\"\u0004\b!\u0010\u0012\u00a8\u0006\'"}, d2 = {"Lcom/example/githubClient/model/Repo;", "Landroid/os/Parcelable;", "parcel", "Landroid/os/Parcel;", "(Landroid/os/Parcel;)V", "id", "", "nodeId", "", "name", "fullName", "htmlUrl", "description", "language", "(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", "getDescription", "()Ljava/lang/String;", "setDescription", "(Ljava/lang/String;)V", "getFullName", "setFullName", "getHtmlUrl", "setHtmlUrl", "getId", "()Ljava/lang/Integer;", "setId", "(Ljava/lang/Integer;)V", "Ljava/lang/Integer;", "getLanguage", "setLanguage", "getName", "setName", "getNodeId", "setNodeId", "describeContents", "writeToParcel", "", "flags", "CREATOR", "app_debug"})
+@kotlin.Metadata(mv = {1, 1, 15}, bv = {1, 0, 3}, k = 1, d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000e\n\u0002\b!\n\u0002\u0010\u0002\n\u0002\b\u0003\u0018\u0000 ,2\u00020\u0001:\u0001,B\u000f\b\u0016\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004B_\u0012\b\u0010\u0005\u001a\u0004\u0018\u00010\u0006\u0012\b\u0010\u0007\u001a\u0004\u0018\u00010\b\u0012\b\u0010\t\u001a\u0004\u0018\u00010\b\u0012\b\u0010\n\u001a\u0004\u0018\u00010\b\u0012\b\u0010\u000b\u001a\u0004\u0018\u00010\b\u0012\b\u0010\f\u001a\u0004\u0018\u00010\b\u0012\b\u0010\r\u001a\u0004\u0018\u00010\b\u0012\b\u0010\u000e\u001a\u0004\u0018\u00010\u0006\u0012\b\u0010\u000f\u001a\u0004\u0018\u00010\u0006\u00a2\u0006\u0002\u0010\u0010J\b\u0010(\u001a\u00020\u0006H\u0016J\u0018\u0010)\u001a\u00020*2\u0006\u0010\u0002\u001a\u00020\u00032\u0006\u0010+\u001a\u00020\u0006H\u0016R \u0010\f\u001a\u0004\u0018\u00010\b8\u0006@\u0006X\u0087\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u0011\u0010\u0012\"\u0004\b\u0013\u0010\u0014R\"\u0010\u000f\u001a\u0004\u0018\u00010\u00068\u0006@\u0006X\u0087\u000e\u00a2\u0006\u0010\n\u0002\u0010\u0019\u001a\u0004\b\u0015\u0010\u0016\"\u0004\b\u0017\u0010\u0018R \u0010\n\u001a\u0004\u0018\u00010\b8\u0006@\u0006X\u0087\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u001a\u0010\u0012\"\u0004\b\u001b\u0010\u0014R \u0010\u000b\u001a\u0004\u0018\u00010\b8\u0006@\u0006X\u0087\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u001c\u0010\u0012\"\u0004\b\u001d\u0010\u0014R\"\u0010\u0005\u001a\u0004\u0018\u00010\u00068\u0006@\u0006X\u0087\u000e\u00a2\u0006\u0010\n\u0002\u0010\u0019\u001a\u0004\b\u001e\u0010\u0016\"\u0004\b\u001f\u0010\u0018R \u0010\r\u001a\u0004\u0018\u00010\b8\u0006@\u0006X\u0087\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b \u0010\u0012\"\u0004\b!\u0010\u0014R \u0010\t\u001a\u0004\u0018\u00010\b8\u0006@\u0006X\u0087\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\"\u0010\u0012\"\u0004\b#\u0010\u0014R \u0010\u0007\u001a\u0004\u0018\u00010\b8\u0006@\u0006X\u0087\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b$\u0010\u0012\"\u0004\b%\u0010\u0014R\"\u0010\u000e\u001a\u0004\u0018\u00010\u00068\u0006@\u0006X\u0087\u000e\u00a2\u0006\u0010\n\u0002\u0010\u0019\u001a\u0004\b&\u0010\u0016\"\u0004\b\'\u0010\u0018\u00a8\u0006-"}, d2 = {"Lcom/example/githubClient/model/Repo;", "Landroid/os/Parcelable;", "parcel", "Landroid/os/Parcel;", "(Landroid/os/Parcel;)V", "id", "", "nodeId", "", "name", "fullName", "htmlUrl", "description", "language", "stargazersCount", "forksCount", "(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;)V", "getDescription", "()Ljava/lang/String;", "setDescription", "(Ljava/lang/String;)V", "getForksCount", "()Ljava/lang/Integer;", "setForksCount", "(Ljava/lang/Integer;)V", "Ljava/lang/Integer;", "getFullName", "setFullName", "getHtmlUrl", "setHtmlUrl", "getId", "setId", "getLanguage", "setLanguage", "getName", "setName", "getNodeId", "setNodeId", "getStargazersCount", "setStargazersCount", "describeContents", "writeToParcel", "", "flags", "CREATOR", "app_debug"})
 public final class Repo implements android.os.Parcelable {
     @org.jetbrains.annotations.Nullable()
     @com.google.gson.annotations.SerializedName(value = "id")
@@ -25,6 +25,12 @@ public final class Repo implements android.os.Parcelable {
     @org.jetbrains.annotations.Nullable()
     @com.google.gson.annotations.SerializedName(value = "language")
     private java.lang.String language;
+    @org.jetbrains.annotations.Nullable()
+    @com.google.gson.annotations.SerializedName(value = "stargazers_count")
+    private java.lang.Integer stargazersCount;
+    @org.jetbrains.annotations.Nullable()
+    @com.google.gson.annotations.SerializedName(value = "forks_count")
+    private java.lang.Integer forksCount;
     public static final com.example.githubClient.model.Repo.CREATOR CREATOR = null;
     
     @org.jetbrains.annotations.Nullable()
@@ -90,6 +96,24 @@ public final class Repo implements android.os.Parcelable {
     java.lang.String p0) {
     }
     
+    @org.jetbrains.annotations.Nullable()
+    public final java.lang.Integer getStargazersCount() {
+        return null;
+    }
+    
+    public final void setStargazersCount(@org.jetbrains.annotations.Nullable()
+    java.lang.Integer p0) {
+    }
+    
+    @org.jetbrains.annotations.Nullable()
+    public final java.lang.Integer getForksCount() {
+        return null;
+    }
+    
+    public final void setForksCount(@org.jetbrains.annotations.Nullable()
+    java.lang.Integer p0) {
+    }
+    
     @java.lang.Override()
     public void writeToParcel(@org.jetbrains.annotations.NotNull()
     android.os.Parcel parcel, int flags) {
@@ -107,10 +131,17 @@ public final class Repo implements android.os.Parcelable {
     java.lang.String fullName, @org.jetbrains.annotations.Nullable()
     java.lang.String htmlUrl, @org.jetbrains.annotations.Nullable()
     java.lang.String description, @org.jetbrains.annotations.Nullable()
-    java.lang.String language) {
+    java.lang.String language, @org.jetbrains.annotations.Nullable()
+    java.lang.Integer stargazersCount, @org.jetbrains.annotations.Nullable()
+    java.lang.Integer forksCount) {
         super();
     }
     
+    /**
+     * The github api currently does not give the correct watch count through `watchers_count`
+     * The only way to get the watch count is to hit `/repos/:owner/:repo` and obtain the
+     * `subscribers_count` instead. This'll result in O(n) network calls.
+     */
     public Repo(@org.jetbrains.annotations.NotNull()
     android.os.Parcel parcel) {
         super();
