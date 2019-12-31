@@ -1,30 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
 
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/colorTertiary"
-        android:checkable="true"
-        app:rippleColor="@color/colorPrimary"
-        app:strokeColor="@color/colorPrimary"
-        app:strokeWidth="1dp"
-        android:padding="8dp"
-        android:layout_margin="6dp">
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:checkable="true"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/white"
+    app:rippleColor="@color/colorPrimary"
+    app:strokeWidth="1dp"
+    >
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
 
         <TextView
-            android:id="@+id/repositoryListRowText"
+            android:id="@+id/repositoryListRowTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/repositoryListRowTextDescription"
             android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="4dp"
-            android:textColor="@color/colorPrimary"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textColor="#555"
+            />
 
-    </com.google.android.material.card.MaterialCardView>
+        <TextView
+            android:id="@+id/repositoryListRowTextLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#555"
+            />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
 
 
-</LinearLayout>

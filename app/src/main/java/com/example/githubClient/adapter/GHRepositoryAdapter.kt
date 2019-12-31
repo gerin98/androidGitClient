@@ -16,9 +16,12 @@ class GHRepositoryAdapter(private val repositories: ArrayList<Repo>?) : Recycler
     }
 
     class GHRepositoryViewHolder(view: View) : RecyclerView.ViewHolder(view), View.OnClickListener {
-        val textView: TextView = view.findViewById(R.id.repositoryListRowText)
+        val textViewName: TextView = view.findViewById(R.id.repositoryListRowTextName)
+        val textViewDescription: TextView = view.findViewById(R.id.repositoryListRowTextDescription)
+        val textViewLanguage: TextView = view.findViewById(R.id.repositoryListRowTextLanguage)
+
         init {
-            textView.setOnClickListener(this)
+            textViewName.setOnClickListener(this)
         }
 
         override fun onClick(view: View?) {
@@ -34,6 +37,8 @@ class GHRepositoryAdapter(private val repositories: ArrayList<Repo>?) : Recycler
     override fun getItemCount(): Int = repositories?.size ?: 0
 
     override fun onBindViewHolder(holder: GHRepositoryViewHolder, position: Int) {
-        holder.textView.text = repositories?.get(position)?.name
+        holder.textViewName.text = repositories?.get(position)?.name
+        holder.textViewDescription.text = repositories?.get(position)?.description
+        holder.textViewLanguage.text = repositories?.get(position)?.language
     }
 }

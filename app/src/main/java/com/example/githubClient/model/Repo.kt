@@ -4,10 +4,12 @@ import android.os.Parcel
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
-class Repo(id: Int?, nodeId: String?, name: String?, fullName: String?, htmlUrl: String?) : Parcelable{
+class Repo(id: Int?, nodeId: String?, name: String?, fullName: String?, htmlUrl: String?, description: String?, language: String?) : Parcelable{
 
     constructor(parcel: Parcel) : this(
         parcel.readValue(Int::class.java.classLoader) as? Int,
+        parcel.readString(),
+        parcel.readString(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
@@ -33,6 +35,10 @@ class Repo(id: Int?, nodeId: String?, name: String?, fullName: String?, htmlUrl:
     var fullName: String? = null
     @SerializedName("html_url")
     var htmlUrl: String? = null
+    @SerializedName("description")
+    var description: String? = null
+    @SerializedName("language")
+    var language: String? = null
 
     init {
         this.id = id
@@ -40,6 +46,8 @@ class Repo(id: Int?, nodeId: String?, name: String?, fullName: String?, htmlUrl:
         this.name = name
         this.fullName = fullName
         this.htmlUrl = htmlUrl
+        this.description = description
+        this.language = language
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
@@ -48,6 +56,8 @@ class Repo(id: Int?, nodeId: String?, name: String?, fullName: String?, htmlUrl:
         parcel.writeString(name)
         parcel.writeString(fullName)
         parcel.writeString(htmlUrl)
+        parcel.writeString(description)
+        parcel.writeString(language)
     }
 
     override fun describeContents(): Int {

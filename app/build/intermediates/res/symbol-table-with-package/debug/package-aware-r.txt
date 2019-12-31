@@ -1660,7 +1660,9 @@ id repoListUserCompany
 id repoListUserLocation
 id repoListUserName
 id repo_button
-id repositoryListRowText
+id repositoryListRowTextDescription
+id repositoryListRowTextLanguage
+id repositoryListRowTextName
 id repositoryRecyclerView
 id right
 id right_icon

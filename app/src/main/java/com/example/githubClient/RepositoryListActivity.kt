@@ -28,7 +28,7 @@ class RepositoryListActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerView(repositories: ArrayList<Repo>?) {
-        viewManager = GridLayoutManager(this, 2)
+        viewManager = GridLayoutManager(this, 1)
         viewAdapter = GHRepositoryAdapter(repositories)
 
         recyclerView = repositoryRecyclerView.apply {
