@@ -1,7 +1,9 @@
 package com.example.githubClient
 
+import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.githubClient.adapter.GHRepositoryAdapter
@@ -49,8 +51,22 @@ class RepositoryListActivity : AppCompatActivity() {
             .into(repoListAvatarImage)
 
         // set bio
-        repoListUserName.text = userInfo.name
-        repoListUserCompany.text = userInfo.company
-        repoListUserLocation.text = userInfo.location
+        if (userInfo.name.isNullOrBlank()) {
+            repoListUserName.visibility = View.GONE
+        } else {
+            repoListUserName.text = userInfo.name
+        }
+
+        if (userInfo.company.isNullOrBlank()) {
+            repoListCompanyLayout.visibility = View.GONE
+        } else {
+            repoListUserCompany.text = userInfo.company
+        }
+
+        if (userInfo.location.isNullOrBlank()) {
+            repoListLocationLayout.visibility = View.GONE
+        } else {
+            repoListUserLocation.text = userInfo.location        }
+
     }
 }

@@ -1661,6 +1661,8 @@ id progress_circular
 id progress_horizontal
 id radio
 id repoListAvatarImage
+id repoListCompanyLayout
+id repoListLocationLayout
 id repoListUserCompany
 id repoListUserLocation
 id repoListUserName
