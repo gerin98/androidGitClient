@@ -3,7 +3,6 @@ package com.example.githubClient
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.githubClient.adapter.GHRepositoryAdapter
 import com.example.githubClient.model.Repo
@@ -18,6 +17,9 @@ class RepositoryListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_repository_list)
+
+        val actionBar = actionBar
+        actionBar?.setDisplayHomeAsUpEnabled(true)
 
         val repositories: ArrayList<Repo>? = intent.extras?.getParcelableArrayList<Repo>("dataset") ?: ArrayList(0)
         val userInfo: User? = intent.extras?.getParcelable("user")
