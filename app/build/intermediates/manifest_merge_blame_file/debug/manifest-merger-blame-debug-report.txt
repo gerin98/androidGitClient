@@ -15,7 +15,7 @@
 11-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:5:22-64
 12
 13    <application
-13-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:7:5-25:19
+13-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:7:5-26:19
 14        android:allowBackup="true"
 14-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:8:9-35
 15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -32,41 +32,44 @@
 21        android:testOnly="true"
 22        android:theme="@style/AppTheme" >
 22-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:13:9-40
-23        <activity android:name="com.example.githubClient.RepositoryListActivity" >
-23-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:14:9-18:20
-23-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:14:19-57
-24            <meta-data
-24-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:15:13-17:49
-25                android:name="android.support.PARENT_ACTIVITY"
-25-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:16:17-63
-26                android:value=".MainActivity" />
-26-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:17:17-46
-27        </activity>
-28        <activity android:name="com.example.githubClient.MainActivity" >
-28-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:19:9-24:20
-28-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:19:19-47
-29            <intent-filter>
-29-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:20:13-23:29
-30                <action android:name="android.intent.action.MAIN" />
-30-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:21:17-69
-30-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:21:25-66
-31
-32                <category android:name="android.intent.category.LAUNCHER" />
-32-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:22:17-77
-32-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:22:27-74
-33            </intent-filter>
-34        </activity>
-35
-36        <provider
-36-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/gerin.amalaraj/.gradle/caches/transforms-2/files-2.1/b152b3c04d3a695c87d2a265ecb4f689/lifecycle-process-2.1.0/AndroidManifest.xml:23:9-27:43
-37            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-37-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/gerin.amalaraj/.gradle/caches/transforms-2/files-2.1/b152b3c04d3a695c87d2a265ecb4f689/lifecycle-process-2.1.0/AndroidManifest.xml:24:13-79
-38            android:authorities="com.example.githubClient.lifecycle-process"
-38-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/gerin.amalaraj/.gradle/caches/transforms-2/files-2.1/b152b3c04d3a695c87d2a265ecb4f689/lifecycle-process-2.1.0/AndroidManifest.xml:25:13-69
-39            android:exported="false"
-39-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/gerin.amalaraj/.gradle/caches/transforms-2/files-2.1/b152b3c04d3a695c87d2a265ecb4f689/lifecycle-process-2.1.0/AndroidManifest.xml:26:13-37
-40            android:multiprocess="true" />
-40-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/gerin.amalaraj/.gradle/caches/transforms-2/files-2.1/b152b3c04d3a695c87d2a265ecb4f689/lifecycle-process-2.1.0/AndroidManifest.xml:27:13-40
-41    </application>
-42
-43</manifest>
+23        <activity
+23-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:14:9-19:20
+24            android:name="com.example.githubClient.RepositoryListActivity"
+24-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:14:19-57
+25            android:parentActivityName="com.example.githubClient.MainActivity" >
+25-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:15:13-55
+26            <meta-data
+26-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:16:13-18:49
+27                android:name="android.support.PARENT_ACTIVITY"
+27-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:17:17-63
+28                android:value=".MainActivity" />
+28-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:18:17-46
+29        </activity>
+30        <activity android:name="com.example.githubClient.MainActivity" >
+30-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:20:9-25:20
+30-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:20:19-47
+31            <intent-filter>
+31-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:21:13-24:29
+32                <action android:name="android.intent.action.MAIN" />
+32-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:22:17-69
+32-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:22:25-66
+33
+34                <category android:name="android.intent.category.LAUNCHER" />
+34-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:23:17-77
+34-->/Users/gerin.amalaraj/AndroidStudioProjects/GithubClient/app/src/main/AndroidManifest.xml:23:27-74
+35            </intent-filter>
+36        </activity>
+37
+38        <provider
+38-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/gerin.amalaraj/.gradle/caches/transforms-2/files-2.1/b152b3c04d3a695c87d2a265ecb4f689/lifecycle-process-2.1.0/AndroidManifest.xml:23:9-27:43
+39            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+39-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/gerin.amalaraj/.gradle/caches/transforms-2/files-2.1/b152b3c04d3a695c87d2a265ecb4f689/lifecycle-process-2.1.0/AndroidManifest.xml:24:13-79
+40            android:authorities="com.example.githubClient.lifecycle-process"
+40-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/gerin.amalaraj/.gradle/caches/transforms-2/files-2.1/b152b3c04d3a695c87d2a265ecb4f689/lifecycle-process-2.1.0/AndroidManifest.xml:25:13-69
+41            android:exported="false"
+41-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/gerin.amalaraj/.gradle/caches/transforms-2/files-2.1/b152b3c04d3a695c87d2a265ecb4f689/lifecycle-process-2.1.0/AndroidManifest.xml:26:13-37
+42            android:multiprocess="true" />
+42-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/gerin.amalaraj/.gradle/caches/transforms-2/files-2.1/b152b3c04d3a695c87d2a265ecb4f689/lifecycle-process-2.1.0/AndroidManifest.xml:27:13-40
+43    </application>
+44
+45</manifest>

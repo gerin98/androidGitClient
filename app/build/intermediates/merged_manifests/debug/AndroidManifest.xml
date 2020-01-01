@@ -20,7 +20,9 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.githubClient.RepositoryListActivity" >
+        <activity
+            android:name="com.example.githubClient.RepositoryListActivity"
+            android:parentActivityName="com.example.githubClient.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />

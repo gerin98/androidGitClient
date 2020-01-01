@@ -75,6 +75,10 @@ class RepositoryListActivity : AppCompatActivity() {
                 alertDialogBuilder.create().show()
                 true
             }
+            android.R.id.home -> {
+                onNavigateUp()
+                true
+            }
             else-> {
                 true
             }
