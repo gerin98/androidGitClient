@@ -18,10 +18,6 @@ class GHRepositoryAdapter(private val repositories: ArrayList<Repo>?) : Recycler
     companion object {
         private val TAG = GHRepositoryAdapter::class.java.simpleName
     }
-//
-//    private val sortedRepositories by lazy {
-//        repositories?.sortedWith(compareBy {it.language})
-//    }
 
     class GHRepositoryViewHolder(view: View) : RecyclerView.ViewHolder(view), View.OnClickListener {
         val textViewName: TextView = view.findViewById(R.id.repositoryListRowTextName)
