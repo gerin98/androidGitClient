@@ -1,6 +1,7 @@
 package com.example.githubClient
 
 import android.util.Log
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -12,7 +13,10 @@ import com.example.githubClient.model.User
 import com.example.githubClient.service.GitHubService
 import com.example.githubClient.service.GithubApi
 import io.reactivex.Observable
-import java.lang.Exception
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.observers.ResourceObserver
+import io.reactivex.schedulers.Schedulers
 
 class MainActivityViewModel: ViewModel() {
 
@@ -20,37 +24,31 @@ class MainActivityViewModel: ViewModel() {
         private val TAG = MainActivityViewModel::class.java.simpleName
     }
 
+    private val compositeDisposable : CompositeDisposable by lazy { CompositeDisposable() }
+
     // databinding livedata
     val userName = MutableLiveData<String?>("")
 
     // network response livedata
-    val userModel = MutableLiveData<User?>(null)
-    val repoModel = MutableLiveData<ArrayList<Repo>?>(null)
-    val errorState = ExplicitLiveData<Boolean>()
+    private val _userModel = MutableLiveData<User?>(null)
+    val userModel: LiveData<User?>
+        get() = _userModel
+    private val _repoModel = MutableLiveData<ArrayList<Repo>?>(null)
+    val repoModel: LiveData<ArrayList<Repo>?>
+        get() = _repoModel
+    private val _errorState = ExplicitLiveData<Boolean>()
+    val errorState: LiveData<Boolean>
+        get() = _errorState
 
     val dataStatus = MediatorLiveData<LiveDataWrapper<Unit, Exception>>().apply {
-        addSource(userModel) {
+        addSource(_userModel) {
             value = wasDataFetchSuccessful()
         }
-        addSource(repoModel) {
+        addSource(_repoModel) {
             value = wasDataFetchSuccessful()
         }
-        addSource(errorState){
+        addSource(_errorState){
             value = wasDataFetchSuccessful()
-        }
-    }
-
-    private fun wasDataFetchSuccessful() : LiveDataWrapper<Unit, Exception> {
-        return if (errorState.value == true) {
-            Log.e(TAG, "LDW error")
-            LiveDataWrapper(ResourceStatus.ERROR, null, null)
-        }
-        else if (userModel.value != null && repoModel.value != null) {
-            Log.e(TAG, "LDW success")
-            LiveDataWrapper(ResourceStatus.SUCCESS, null, null)
-        } else {
-            Log.e(TAG, "LDW loading")
-            LiveDataWrapper(ResourceStatus.LOADING, null, null)
         }
     }
 
@@ -60,17 +58,68 @@ class MainActivityViewModel: ViewModel() {
         }
     }
 
+    override fun onCleared() {
+        compositeDisposable.dispose()
+        super.onCleared()
+    }
+
+    private fun wasDataFetchSuccessful() : LiveDataWrapper<Unit, Exception> {
+        return if (_errorState.value == true) {
+            Log.e(TAG, "LDW error")
+            LiveDataWrapper(ResourceStatus.ERROR, null, null)
+        }
+        else if (_userModel.value != null && _repoModel.value != null) {
+            Log.e(TAG, "LDW success")
+            LiveDataWrapper(ResourceStatus.SUCCESS, null, null)
+        } else {
+            Log.e(TAG, "LDW loading")
+            LiveDataWrapper(ResourceStatus.LOADING, null, null)
+        }
+    }
+
     private fun checkFields(): Boolean {
         return !userName.value.isNullOrBlank()
     }
 
-    fun fetchRepos(usernameInput: String): Observable<ArrayList<Repo>> {
+    private fun fetchRepos(usernameInput: String): Observable<ArrayList<Repo>> {
         val service = GithubApi.getRetrofitInstance().create(GitHubService::class.java)
         return service.listRepos(usernameInput)
     }
 
-    fun fetchUserInfo(usernameInput: String): Observable<User> {
+    private fun fetchUserInfo(usernameInput: String): Observable<User> {
         val service = GithubApi.getRetrofitInstance().create(GitHubService::class.java)
         return service.getUser(usernameInput)
+    }
+
+     fun fetchUserRepos(username: String) {
+        val rs = object: ResourceObserver<Any>() {
+            override fun onComplete() {
+                //do nothing
+            }
+
+            // there should only be 2 results. 1 for /users and 1 for /repos
+            override fun onNext(result: Any) {
+                when (result) {
+                    is User -> _userModel.value = result
+                    is ArrayList<*> -> _repoModel.value = result as? ArrayList<Repo>
+                    else -> Log.e(TAG, "error")
+                }
+            }
+
+            override fun onError(e: Throwable) {
+                _errorState.value = true
+            }
+        }
+        val disposable = Observable.concat(
+            fetchUserInfo(username).subscribeOn(Schedulers.io()),
+            fetchRepos(username).subscribeOn(Schedulers.io()))
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribeWith(rs)
+        compositeDisposable.add(disposable)
+    }
+
+    fun clearNetworkResponse() {
+        _userModel.value = null
+        _repoModel.value = null
     }
 }
