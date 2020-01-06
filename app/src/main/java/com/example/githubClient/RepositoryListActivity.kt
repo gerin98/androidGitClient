@@ -91,21 +91,21 @@ class RepositoryListActivity : AppCompatActivity() {
                 RepositoryListActivityViewModel.SortBy.ALPHABETICAL -> {
                     Log.e("gerin", "ALPHABETICAL")
                     checkedItem = 0
-                    repositories = ArrayList(repositories.sortedWith(compareBy {it.language}))
+                    repositories = ArrayList(repositories.sortedWith(compareBy {it.name}))
                     recyclerView.invalidate()
                     setupRecyclerView()
                 }
                 RepositoryListActivityViewModel.SortBy.STARRED -> {
                     Log.e("gerin", "STARRED")
                     checkedItem = 1
-                    repositories = ArrayList(repositories.sortedWith(compareBy {it.stargazersCount}))
+                    repositories = ArrayList(repositories.sortedWith(compareByDescending {it.stargazersCount}))
                     recyclerView.invalidate()
                     setupRecyclerView()
                 }
                 RepositoryListActivityViewModel.SortBy.FORKED -> {
                     Log.e("gerin", "FORKED")
                     checkedItem = 2
-                    repositories = ArrayList(repositories.sortedWith(compareBy {it.forksCount}))
+                    repositories = ArrayList(repositories.sortedWith(compareByDescending {it.forksCount}))
                     recyclerView.invalidate()
                     setupRecyclerView()
                 }
