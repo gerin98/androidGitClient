@@ -52,6 +52,8 @@ class MainActivityViewModel: ViewModel() {
         }
     }
 
+    val darkMode = MutableLiveData<Int>(R.drawable.github_logo_dark)
+
     val valid = MediatorLiveData<Boolean>().apply {
         addSource(userName) {
             value = checkFields()
