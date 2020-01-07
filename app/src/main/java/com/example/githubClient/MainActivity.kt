@@ -34,10 +34,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         if (isDarkTheme(this)) {
-            Log.e("gerin", "dark mode")
             viewModel.darkMode.postValue(R.drawable.github_logo_white)
         } else {
-            Log.e("gerin", "light mode")
             viewModel.darkMode.postValue(R.drawable.github_logo_dark)
         }
 

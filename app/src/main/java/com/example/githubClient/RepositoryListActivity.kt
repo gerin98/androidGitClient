@@ -1,5 +1,8 @@
 package com.example.githubClient
 
+import android.app.Activity
+import android.content.res.Configuration
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -23,7 +26,7 @@ class RepositoryListActivity : AppCompatActivity() {
     lateinit var repositories: ArrayList<Repo>
     var checkedItem = 0
 
-    val viewModel by lazy {
+    private val viewModel by lazy {
         ViewModelProviders.of(this).get(RepositoryListActivityViewModel::class.java)
     }
 
@@ -41,7 +44,24 @@ class RepositoryListActivity : AppCompatActivity() {
         userInfo?.also {
             setProfileData(it)
         }
-        setupRecyclerView()
+
+        if (isDarkTheme(this)) {
+            Log.e("gerin", "dark mode")
+            repositoryRecyclerView.setBackgroundColor(Color.BLACK)
+            repositoryDrawerTitle.background = getDrawable(R.drawable.bottom_sheet_background_dark)
+            setupRecyclerView(true)
+        } else {
+            Log.e("gerin", "light mode")
+            repositoryRecyclerView.setBackgroundColor(resources.getColor(R.color.background))
+            repositoryDrawerTitle.background = getDrawable(R.drawable.bottom_sheet_background)
+            setupRecyclerView(false)
+        }
+
+    }
+
+    fun isDarkTheme(activity: Activity): Boolean {
+        return activity.resources.configuration.uiMode and
+                Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -119,9 +139,10 @@ class RepositoryListActivity : AppCompatActivity() {
         })
     }
 
-    private fun setupRecyclerView() {
+    private fun setupRecyclerView(darkMode: Boolean) {
+        Log.e("gerin", "setup recycler view")
         viewManager = GridLayoutManager(this, 1)
-        viewAdapter = GHRepositoryAdapter(repositories)
+        viewAdapter = GHRepositoryAdapter(repositories, darkMode, applicationContext)
 
         recyclerView = repositoryRecyclerView.apply {
             layoutManager = viewManager
