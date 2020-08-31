@@ -29,7 +29,7 @@ Clone this repo to play with it yourself.
 ```
 git clone https://github.com/gerin98/androidGitClient.git
 ```
-You can also download the APK directly here.
+You can also download the APK directly [here](https://github.com/gerin98/androidGitClient/releases).
 
 ## Tech Stack :hammer_and_wrench:
 - Language
