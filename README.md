@@ -6,9 +6,7 @@ Search and Browse through GitHub repos with this helpful android app. Powered by
 **[2. Api](#api-newspaper)**<br>
 **[3. Getting Started](#getting-started-rocket)**<br>
 **[4. Tech Stack](#tech-stack-hammer_and_wrench)**<br>
-**[5. Credits](#credits-closed_book)**<br>
-**[6. Author](#author-pencil2)**<br>
-**[7. License](#license)**<br>
+**[5. License](#license)**<br>
 
 ## Main Features :bulb:
 
@@ -47,9 +45,6 @@ You can also download the APK directly here.
   - [Icons](https://material.io/resources/icons/?style=baseline) - delightful, beautifully crafted symbols for common actions and items.
 - Image loading
   - [Glide](https://github.com/bumptech/glide) - An image loading and caching library for Android focused on smooth scrolling.
-## Credits :closed_book:
-
-## Author :pencil2:
 
 ## License
 ```
