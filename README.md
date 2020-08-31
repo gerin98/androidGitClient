@@ -5,8 +5,8 @@ Search and Browse through GitHub repos with this helpful android app. Powered by
 
 ## Table of Contents
 **[1. Main Features](#main-features-bulb)**<br>
-**[2. Api](#api-newspaper)**<br>
-**[3. Getting Started](#getting-started-rocket)**<br>
+**[2. Getting Started](#getting-started-rocket)**<br>
+**[3. Api](#api-newspaper)**<br>
 **[4. Tech Stack](#tech-stack-hammer_and_wrench)**<br>
 **[5. License](#license)**<br>
 
@@ -21,15 +21,15 @@ Search by GitHub username to obtain all of their public repos.
 #### Sorting :open_file_folder:
 Sort results by alphabetical, most starred or most forked.
 
-## Api :newspaper:
-This project makes use of the [Github's API](https://docs.github.com/en/rest) to query for users and repos. 
-
 ## Getting Started :rocket:
 Clone this repo to play with it yourself. 
 ```
 git clone https://github.com/gerin98/androidGitClient.git
 ```
 You can also download the APK directly [here](https://github.com/gerin98/androidGitClient/releases).
+
+## Api :newspaper:
+This project makes use of the [Github's API](https://docs.github.com/en/rest) to query for users and repos. 
 
 ## Tech Stack :hammer_and_wrench:
 - Language
