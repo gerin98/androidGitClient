@@ -25,6 +25,11 @@ Sort results by alphabetical, most starred or most forked.
 This project makes use of the [Github's API](https://docs.github.com/en/rest) to query for users and repos. 
 
 ## Getting Started :rocket:
+Clone this repo to play with it yourself. 
+```
+git clone https://github.com/gerin98/androidGitClient.git
+```
+You can also download the APK directly here.
 
 ## Tech Stack :hammer_and_wrench:
 
