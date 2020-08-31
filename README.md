@@ -1,4 +1,4 @@
-[![license](https://img.shields.io/github/license/DAVFoundation/captain-n3m0.svg?style=for-the-badge)](https://github.com/gerin98/androidGitClient/blob/master/LICENSE) [![download](https://img.shields.io/badge/Download-apk-brightgreen?style=for-the-badge&logo=android)](https://github.com/gerin98/NewsCast/releases)
+[![license](https://img.shields.io/github/license/DAVFoundation/captain-n3m0.svg?style=for-the-badge)](https://github.com/gerin98/androidGitClient/blob/master/LICENSE) [![download](https://img.shields.io/badge/Download-apk-brightgreen?style=for-the-badge&logo=android)](https://github.com/gerin98/androidGitClient/releases)
 
 # Android Git Client
 Search and Browse through GitHub repos with this helpful android app. Powered by the GitHub REST API, you can find any public repo hosted in GitHub!
