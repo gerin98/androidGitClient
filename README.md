@@ -32,7 +32,21 @@ git clone https://github.com/gerin98/androidGitClient.git
 You can also download the APK directly here.
 
 ## Tech Stack :hammer_and_wrench:
-
+- Language
+  - [Kotlin](https://kotlinlang.org/) - First class and official programming language for Android development.
+- Architecture
+  - [MVVM & Repository pattern](https://developer.android.com/jetpack/docs/guide#overview) - separate ui logic from business logic.
+  - [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) - an observable lifecycle-aware data holder class.
+  - [ViewBinding](https://developer.android.com/topic/libraries/view-binding) - easily write code that interacts with views.
+- Network
+  - [Retrofit](https://square.github.io/retrofit/) - A type-safe HTTP client for Android and Java.
+  - [OkHttp](https://square.github.io/okhttp/) - an HTTP client that’s efficient by default.
+- UI
+  - [Databinding](https://developer.android.com/topic/libraries/data-binding) - bind UI components in your layouts to data sources in your app.
+  - [Material Design](https://material.io/design) - a visual language that synthesizes the classic principles of good design with the innovation of technology and science.
+  - [Icons](https://material.io/resources/icons/?style=baseline) - delightful, beautifully crafted symbols for common actions and items.
+- Image loading
+  - [Glide](https://github.com/bumptech/glide) - An image loading and caching library for Android focused on smooth scrolling.
 ## Credits :closed_book:
 
 ## Author :pencil2:
