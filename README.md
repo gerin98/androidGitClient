@@ -13,6 +13,7 @@ Search and Browse through GitHub repos with this helpful android app.
 ## Main Features :bulb:
 
 ## Api :newspaper:
+This project makes use of the [Github's API](https://docs.github.com/en/rest) to query for users and repos. 
 
 ## Getting Started :rocket:
 
