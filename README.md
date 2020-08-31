@@ -1,5 +1,5 @@
-# androidGitClient
-Search and Browse through GitHub repos with this helpful android app.
+# Android Git Client
+Search and Browse through GitHub repos with this helpful android app. Powered by the GitHub REST API, you can find any public repo hosted in GitHub!
 
 ## Table of Contents
 **[1. Main Features](#main-features-bulb)**<br>
@@ -11,6 +11,11 @@ Search and Browse through GitHub repos with this helpful android app.
 **[7. License](#license)**<br>
 
 ## Main Features :bulb:
+#### Dark Mode :first_quarter_moon:
+
+#### Search :mag:
+
+#### Sorting :open_file_folder:
 
 ## Api :newspaper:
 This project makes use of the [Github's API](https://docs.github.com/en/rest) to query for users and repos. 
@@ -18,6 +23,8 @@ This project makes use of the [Github's API](https://docs.github.com/en/rest) to
 ## Getting Started :rocket:
 
 ## Tech Stack :hammer_and_wrench:
+
+## Credits :closed_book:
 
 ## Author :pencil2:
 
