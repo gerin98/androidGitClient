@@ -3,6 +3,8 @@
 # Android Git Client
 Search and Browse through GitHub repos with this helpful android app. Powered by the GitHub REST API, you can find any public repo hosted on GitHub!
 
+<img src="screenshots/light_main.png"/> <img src="screenshots/dark_main.png"/> <img src="screenshots/light_mcsft.png"/> <img src="screenshots/dark_mcsft.png"/>
+
 ## Table of Contents
 **[1. Main Features](#main-features-bulb)**<br>
 **[2. Getting Started](#getting-started-rocket)**<br>
