@@ -11,11 +11,15 @@ Search and Browse through GitHub repos with this helpful android app. Powered by
 **[7. License](#license)**<br>
 
 ## Main Features :bulb:
+
 #### Dark Mode :first_quarter_moon:
+Supports both light and dark themes.
 
 #### Search :mag:
+Search by GitHub username to obtain all of their public repos.
 
 #### Sorting :open_file_folder:
+Sort results by alphabetical, most starred or most forked.
 
 ## Api :newspaper:
 This project makes use of the [Github's API](https://docs.github.com/en/rest) to query for users and repos. 
